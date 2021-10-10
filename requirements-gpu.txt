@@ -7,3 +7,5 @@ matplotlib
 easydict
 pillow
 imutils
+pytk
+flask==1.1.2

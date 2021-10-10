@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<!-- Reference: https://github.com/krishnaik06/Deployment-flask/blob/master/templates/index.html-->
+<body>
+<title>Object Detection</title>
+<div class="login">
+<h1>Object Detection using image tiling</h1>
+
+
+
+<p>Please upload the image</p>
+
+<form action="predict" method="POST" enctype="multipart/form-data">
+    file path: <input type="file" name="myfile"><br>
+    <input type="submit" value="Predict">
+</form>
+<br>
+<br>
+{{ prediction_text1 }}
+<br>
+
+<img src = "{{img_path}}" alt = "detection" >
+
+</div>
+</body>
+</html>
