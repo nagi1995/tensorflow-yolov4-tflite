@@ -60,6 +60,7 @@ def load_weights(model, weights_file, model_name='yolov4', is_tiny=False):
         conv_shape = (filters, in_dim, k_size, k_size)
         conv_weights = np.fromfile(wf, dtype=np.float32, count=np.product(conv_shape))
         # tf shape (height, width, in_dim, out_dim)
+        print(conv_weights.shape, conv_shape)
         conv_weights = conv_weights.reshape(conv_shape).transpose([2, 3, 1, 0])
 
         if i not in output_pos:
@@ -75,22 +76,24 @@ def load_weights(model, weights_file, model_name='yolov4', is_tiny=False):
 def read_class_names(class_file_name):
     names = {}
     with open(class_file_name, 'r') as data:
+    #with open("D:/Study/Python Scripts/tflite/tensorflow-yolov4-tflite/data/classes/obj.names", 'r') as data:
         for ID, name in enumerate(data):
             names[ID] = name.strip('\n')
+    
     return names
 
 def load_config(FLAGS):
-    if FLAGS.tiny:
+    if FLAGS["tiny"]:
         STRIDES = np.array(cfg.YOLO.STRIDES_TINY)
-        ANCHORS = get_anchors(cfg.YOLO.ANCHORS_TINY, FLAGS.tiny)
-        XYSCALE = cfg.YOLO.XYSCALE_TINY if FLAGS.model == 'yolov4' else [1, 1]
+        ANCHORS = get_anchors(cfg.YOLO.ANCHORS_TINY, FLAGS["tiny"])
+        XYSCALE = cfg.YOLO.XYSCALE_TINY if FLAGS["model"] == 'yolov4' else [1, 1]
     else:
         STRIDES = np.array(cfg.YOLO.STRIDES)
-        if FLAGS.model == 'yolov4':
-            ANCHORS = get_anchors(cfg.YOLO.ANCHORS, FLAGS.tiny)
-        elif FLAGS.model == 'yolov3':
-            ANCHORS = get_anchors(cfg.YOLO.ANCHORS_V3, FLAGS.tiny)
-        XYSCALE = cfg.YOLO.XYSCALE if FLAGS.model == 'yolov4' else [1, 1, 1]
+        if FLAGS["model"] == 'yolov4':
+            ANCHORS = get_anchors(cfg.YOLO.ANCHORS, FLAGS["tiny"])
+        elif FLAGS["model"] == 'yolov3':
+            ANCHORS = get_anchors(cfg.YOLO.ANCHORS_V3, FLAGS["tiny"])
+        XYSCALE = cfg.YOLO.XYSCALE if FLAGS["model"] == 'yolov4' else [1, 1, 1]
     NUM_CLASS = len(read_class_names(cfg.YOLO.CLASSES))
 
     return STRIDES, ANCHORS, NUM_CLASS, XYSCALE
