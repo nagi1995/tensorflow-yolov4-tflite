@@ -56,7 +56,7 @@ pip install -r requirements-gpu.txt
 ```
 **Note:** If installing GPU version with Pip, you need to install CUDA and cuDNN in your system. You can find the tutorial for Windows [here](https://www.youtube.com/watch?v=PlW9zAg4cx8).
 # Performance
-<p align="center"><img src="data/performance.png" width="640"\></p>
+<p align="center"><img src="data/performance.png" width="1024"\></p>
 
 
 # Convert YOLOv4 to TensorFlow
@@ -83,7 +83,7 @@ python detect-tiles.py
 #### Output
 
 ##### Yolov4 original weight
-<p align="center"><img src="result.jpg" width="640"\></p>
+<p align="center"><img src="result.jpg" width="1024"\></p>
 
 # Convert to tflite
 
@@ -116,6 +116,3 @@ python detect-tiles-lite.py
   * YOLOv4: Optimal Speed and Accuracy of Object Detection [YOLOv4](https://arxiv.org/abs/2004.10934).
   * [darknet](https://github.com/AlexeyAB/darknet)
   
-   My project is inspired by these previous fantastic YOLOv3 implementations:
-  * [Yolov3 tensorflow](https://github.com/YunYang1994/tensorflow-yolov3)
-  * [Yolov3 tf2](https://github.com/zzh8829/yolov3-tf2)
