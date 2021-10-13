@@ -115,11 +115,11 @@ python gui.py
 ```
 # Demo [video](https://player.vimeo.com/video/625296082) of GUI
 
-[![Watch the video](https://imgur.com/LZnpGeI.png)](https://player.vimeo.com/video/625296082)
+https://user-images.githubusercontent.com/46963154/137169434-9bc7c84f-262d-495a-abd2-b3e1d98905c6.mp4
 
 
 # Demo [video](https://player.vimeo.com/video/625297218) of local cloud deployment
-[![Watch the video](https://imgur.com/pnTEQrf.png)](https://player.vimeo.com/video/625297218)
+https://user-images.githubusercontent.com/46963154/137170709-17c4acda-1842-4fd5-9b56-8b5a1a5203b3.mp4
 
 # References
 
