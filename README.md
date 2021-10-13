@@ -3,7 +3,6 @@
 
 YOLOv4, YOLOv4-tiny Implemented in Tensorflow 2.3. 
 
-This repository is created for the channel [TheCodingBug](https://www.youtube.com/channel/UCcNgapXcZkyW10FIOohZ1uA?sub_confirmation=1).
 
 This repository shows how to convert YOLO v4, YOLOv3, YOLO tiny .weights to .pb, .tflite and trt format for tensorflow, tensorflow lite, tensorRT.
 
@@ -110,6 +109,15 @@ python detect-tiles-lite.py
 ##### Yolov4 tflite fp16 weight
 <p align="center"><img src="result-fp16.jpg" width="640"\></p>
 
+# People who don't want to compromise their data can download this repo and create an virtual environment shown above and run
+```bash
+python gui.py
+```
+Demo video of GUI
+<iframe src="https://player.vimeo.com/video/625296082" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+# Demo video of local cloud deployment
+<iframe src="https://player.vimeo.com/video/625297218" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
 # References
 
