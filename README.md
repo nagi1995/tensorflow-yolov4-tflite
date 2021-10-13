@@ -109,15 +109,17 @@ python detect-tiles-lite.py
 ##### Yolov4 tflite fp16 weight
 <p align="center"><img src="result-fp16.jpg" width="640"\></p>
 
-# People who don't want to compromise their data can download this repo and create an virtual environment shown above and run
+# People who don't want to compromise their data can download this repo and create a virtual environment shown above and run
 ```bash
 python gui.py
 ```
-Demo video of GUI
-<iframe src="https://player.vimeo.com/video/625296082" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+# Demo [video](https://player.vimeo.com/video/625296082) of GUI
 
-# Demo video of local cloud deployment
-<iframe src="https://player.vimeo.com/video/625297218" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+[![Watch the video](https://imgur.com/LZnpGeI.png)](https://player.vimeo.com/video/625296082)
+
+
+# Demo [video](https://player.vimeo.com/video/625297218) of local cloud deployment
+[![Watch the video](https://imgur.com/pnTEQrf.png)](https://player.vimeo.com/video/625297218)
 
 # References
 
